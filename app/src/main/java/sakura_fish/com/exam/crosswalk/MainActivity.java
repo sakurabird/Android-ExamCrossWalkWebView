@@ -84,6 +84,7 @@ public class MainActivity extends AppCompatActivity {
 
         if (mUploadMessage == null) return;
         Uri result = data == null || resultCode != RESULT_OK ? null : data.getData();
+        if (result == null) return;
         mUploadMessage.onReceiveValue(result);
         mUploadMessage = null;
 
